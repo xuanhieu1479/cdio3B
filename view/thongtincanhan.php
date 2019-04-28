@@ -12,25 +12,22 @@ if (isset($_SESSION['update'])) {
 	<title>Website tìm kiếm Homestay</title>
 	<link rel="stylesheet" type="text/css" href="../css/footer.css" />
 	<link rel="stylesheet" type="text/css" href="../css/ThongTinCaNhanCSS/styles.css" />
-	<link href="../css/ThongTinCaNhanCSS/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-	<link href="../css/ThongTinCaNhanCSS/owl.carousel.css" rel="stylesheet">
-	<link href="../css/ThongTinCaNhanCSS/popup-box.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="../css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="../css/owl.carousel.css" rel="stylesheet">
+	<link href="../css/popup-box.css" rel="stylesheet" type="text/css" media="all" />
 	<link href="../css/ThongTinCaNhanCSS/style1.css" rel="stylesheet" type="text/css" media="all" />
-	<link rel="stylesheet" href="../css/ThongTinCaNhanCSS/poposlides.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="../css/poposlides.css" type="text/css" media="all" />
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 	<script type="text/javascript" src="../js/ThongTinCaNhanJS/jquery-3.3.1.min.js">
 	</script>
 	<script type="text/javascript" src="../js/ThongTinCaNhanJS/jquery.validate.min.js">
-	</script>
-	
+	</script>	
 </head>
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 	<div class="demo-inner-content" id="home">
-	<div class="main_agileits">
-	
-		<?php include "header.php" ?>
-
+	<div class="main_agileits">	
+	<?php include "header.php" ?>
 	<form class="form"name="frmLogin" id="frmLogin" action="/controller/capnhatthongtin.php" method=post >
 	<div class="header">
 		<h2>Thông tin cá nhân</h2>	
@@ -46,16 +43,14 @@ if (isset($_SESSION['update'])) {
 		<p>
 			<label>Email (*):</label>
 			<input name="email" value="<?php echo $_SESSION['email']; ?>" type="text" placeholder="Vui lòng nhập Email" disabled />
-		</p>
-		
+		</p>		
 		<p>
-			<input type="submit" name="submit" value="Lưu thông tin" />
-			
+			<input type="submit" name="submit" value="Lưu thông tin" />	
+			<a href="/view/doimatkhau.php"><button type="button" class="btn btn-primary">Đổi mật khẩu</button></a>
 		</p>
-		</div>
-  </form>
-  <?php include "footer.html" ?>
-	
+	</div>
+	</form>
+  	<?php include "footer.html" ?>
 </body>
 <script type="text/javascript">
    $(document).ready(function (){

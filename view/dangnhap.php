@@ -12,7 +12,7 @@ function hideURLbar(){
  window.scrollTo(0,1); 
 	} 
  </script>
-<link rel="stylesheet" href="../css/DangNhapCSS/font-awesome.css">
+<link rel="stylesheet" href="../css/font-awesome.min.css">
 <link rel="stylesheet" href="../css/DangNhapCSS/style.css" type="text/css" media="all" /> <!-- Style-CSS --> 
 
 
@@ -31,7 +31,7 @@ function hideURLbar(){
 				<div style="text-align: center; margin-bottom: 20px; color: red" <?php if(!isset($_SESSION['error'])) echo ' hidden'; ?>>
 					<?php
 					echo $_SESSION['error'];
-					$_SESSION['error'] = null
+					$_SESSION['error'] = null;
 					?>
 				</div>
 				<div class="form-sub-w3">

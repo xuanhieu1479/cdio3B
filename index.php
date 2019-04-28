@@ -11,20 +11,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 		function hideURLbar(){ window.scrollTo(0,1); } </script>
 
-<link href="css/TrangChuCSS/bootstrap.css" rel="stylesheet" type="text/css" media="all" /><!-- bootstrap-css -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" /><!-- bootstrap-css -->
 
-<link href="css/TrangChuCSS/owl.carousel.css" rel="stylesheet"><!-- Owl-carousel-CSS -->
+<link href="css/owl.carousel.css" rel="stylesheet"><!-- Owl-carousel-CSS -->
 
-<link href="css/TrangChuCSS/popup-box.css" rel="stylesheet" type="text/css" media="all" /><!-- pop-up css --> 
+<link href="css/popup-box.css" rel="stylesheet" type="text/css" media="all" /><!-- pop-up css --> 
 
 <link href="css/TrangChuCSS/style.css" rel="stylesheet" type="text/css" media="all" />
 <link rel="stylesheet" type="text/css" href="css/footer.css">
 <!-- banner css -->
-<link rel="stylesheet" href="css/TrangChuCSS/poposlides.css" type="text/css" media="all" />
+<link rel="stylesheet" href="css/poposlides.css" type="text/css" media="all" />
 <!-- //banner css -->
 
 <!-- font-awesome-icons -->
-<link rel="stylesheet" href="css/TrangChuCSS/font-awesome.min.css" />
+<link rel="stylesheet" href="css/font-awesome.min.css" />
 <!-- //font-awesome-icons -->
 
 <!-- google fonts -->
@@ -131,7 +131,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- //Stats-Number-Scroller-Animation-JavaScript -->
 
 <!-- Calendar -->
-<link rel="stylesheet" href="css/TrangChuCSS/jquery-ui.css" />
+<link rel="stylesheet" href="css/jquery-ui.css" />
 	<script src="js/TrangChuJS/jquery-ui.js"></script>
 	<script>
 		$(function() {

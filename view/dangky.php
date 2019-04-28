@@ -11,7 +11,7 @@
 <link href="//fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 <link href="//fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
 
-<link href="../css/DangKyCSS/font-awesome.min.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all" />
 <link href="../css/DangKyCSS/style.css" rel='stylesheet' type='text/css' media="all" />
 
 </head>
@@ -27,7 +27,7 @@
 			<div style="text-align: center; margin-bottom: 20px; color: red" <?php if(!isset($_SESSION['error'])) echo ' hidden'; ?>>
 				<?php
 				echo $_SESSION['error'];
-				$_SESSION['error'] = null
+				$_SESSION['error'] = null;
 				?>
 			</div>
 

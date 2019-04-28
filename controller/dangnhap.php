@@ -17,7 +17,6 @@ if ($stmt->rowCount() == 0) {
     exit();
 }
 
-
 if (!password_verify($password, $result[0]['matkhau'])) {
     $_SESSION['error'] = "Sai mật khẩu";
     header("Location: /view/dangnhap.php");
