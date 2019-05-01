@@ -12,17 +12,10 @@ if (isset($_SESSION['update'])) {
 	<title>Website tìm kiếm Homestay</title>
 	<link rel="stylesheet" type="text/css" href="../css/footer.css" />
 	<link rel="stylesheet" type="text/css" href="../css/ThongTinCaNhanCSS/styles.css" />
-	<link href="../css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-	<link href="../css/owl.carousel.css" rel="stylesheet">
-	<link href="../css/popup-box.css" rel="stylesheet" type="text/css" media="all" />
-	<link href="../css/ThongTinCaNhanCSS/style1.css" rel="stylesheet" type="text/css" media="all" />
-	<link rel="stylesheet" href="../css/poposlides.css" type="text/css" media="all" />
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-	<script type="text/javascript" src="../js/ThongTinCaNhanJS/jquery-3.3.1.min.js">
-	</script>
-	<script type="text/javascript" src="../js/ThongTinCaNhanJS/jquery.validate.min.js">
-	</script>	
+	<script type="text/javascript" src="../js/ThongTinCaNhanJS/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="../js/ThongTinCaNhanJS/jquery.validate.min.js">	</script>	
 </head>
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 	<div class="demo-inner-content" id="home">

@@ -1,7 +1,7 @@
 @font-face { font-family: Roboto; src: url('../font/Roboto-Regular.ttf'); }
 
 body{
-	background:url('../../images/ThongTinCaNhanImages/manhhaiblog\ hình\ nền\ blog.jpg');
+	background:url('../../images/ThongTinCaNhanImages/manhhaiblog\ hình\ nền\ blog.jpg') !important;
 	margin:0;
 	font-family: 'Roboto', sans-serif;
 }

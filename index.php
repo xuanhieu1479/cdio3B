@@ -50,10 +50,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<h2 class="editContent">PERFECT HOMESTAY FOR YOU</h2>
 						<p>Tìm kiếm và đặt Homestay mà bạn mong muốn</p>
 						<div class="book-form">
-						   <form action="#" method="post">
+						   <form action="/view/timkiem.php" method="get">
 								<div class="col-md-2 form-time-w3layouts editContent">
 										<label class="editContent"><span class="fa fa-map-marker" aria-hidden="true"></span>Thành Phố </label>
-										<input type="text" placeholder="Thành Phố Muốn Tìm" required="">
+										<input type="text" placeholder="Thành Phố Muốn Tìm">
 								</div>
 								<div class="col-md-2 form-date-w3-agileits editContent">
 										<label class="editContent"><span class="fa fa-user" aria-hidden="true"></span> Số Người</label>
@@ -142,9 +142,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		
 <!-- for banner js file-->
 <script src="js/TrangChuJS/poposlides.js"></script>
-	<script>
-		$(".slides").poposlides();
-	</script>
+<script>
+	$(".slides").poposlides();
+</script>
 <!-- //for banner js file-->
 
 <!-- pop-up-box -->
