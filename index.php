@@ -53,37 +53,37 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						   <form action="/view/timkiem.php" method="get">
 								<div class="col-md-2 form-time-w3layouts editContent">
 										<label class="editContent"><span class="fa fa-map-marker" aria-hidden="true"></span>Thành Phố </label>
-										<input type="text" placeholder="Thành Phố Muốn Tìm">
+										<input type="text" name="City" placeholder="Thành Phố Muốn Tìm">
 								</div>
 								<div class="col-md-2 form-date-w3-agileits editContent">
 										<label class="editContent"><span class="fa fa-user" aria-hidden="true"></span> Số Người</label>
-										<select class="form-control">
-											<option>1 người</option>
-											<option>2 người</option>
-											<option>3 người</option>
-											<option>4 người</option>
-											<option>5 người hoặc hơn</option>
+										<select class="form-control" name="Quantity">
+											<option value="1">1 người</option>
+											<option value="2">2 người</option>
+											<option value="3">3 người</option>
+											<option value="4">4 người</option>
+											<option value="5">5 người hoặc hơn</option>
 										</select>
 								</div>
 								<div class="col-md-2 form-date-w3-agileits editContent">
 										<label class="editContent"><span class="fa fa-use" aria-hidden="true"></span> Số tiền</label>
-										<select class="form-control">
-											<option>500.000~1.000.000</option>
-											<option>1.000.000~2.000.000</option>
-											<option>2.000.000~3.000.000</option>
-											<option>Từ 3.000.000 trở lên</option>
+										<select class="form-control" name="Price">
+											<option value="500-1000">500.000~1.000.000</option>
+											<option value="1000-2000">1.000.000~2.000.000</option>
+											<option value="2000-3000">2.000.000~3.000.000</option>
+											<option value="3000">Từ 3.000.000 trở lên</option>
 										</select>
 								</div>
 								<div class="col-md-2 form-left-agileits-w3layouts editContent">
 										<label class="editContent"><span class="fa fa-bus" aria-hidden="true"></span> Checkin</label>
 									<div class="agileits_w3layouts_main_gridl">
-										<input class="date has Datepicker" id="datepicker" name="Text" type="text" value="Ngày Ở" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '01/01/2019';}" required="">
+										<input class="date has Datepicker" id="datepicker" placeholder="Ngảy Ở" name="StartDate" type="text" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '01/01/2019';}">
 									</div>
 								</div>
 								<div class="col-md-2 form-left-agileits-w3layouts editContent">
 										<label class="editContent"><span class="fa fa-bus" aria-hidden="true"></span> Checkout</label>
 									<div class="agileits_w3layouts_main_gridl">
-										<input class="date has Datepicker" id="datepicker1" name="Text" type="text" value="Ngày Đi" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '01/01/2019';}" required="">
+										<input class="date has Datepicker" id="datepicker1" placeholder="Ngày Đi" name="EndDate" type="text" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '01/01/2019';}">
 									</div>
 								</div>
 								<div class="col-md-2 form-left-agileits-submit editContent">

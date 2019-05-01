@@ -1,5 +1,6 @@
 <?php
 session_start();
+include "../controller/timkiem.php";
 ?>
 <!DOCTYPE html>
 <head>
