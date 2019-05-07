@@ -12,11 +12,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" /><!-- bootstrap-css -->
-
 <link href="css/owl.carousel.css" rel="stylesheet"><!-- Owl-carousel-CSS -->
-
 <link href="css/popup-box.css" rel="stylesheet" type="text/css" media="all" /><!-- pop-up css --> 
-
 <link href="css/TrangChuCSS/style.css" rel="stylesheet" type="text/css" media="all" />
 <link rel="stylesheet" type="text/css" href="css/footer.css">
 <!-- banner css -->
@@ -40,62 +37,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="demo-inner-content" id="home">
 	<div class="main_agileits">
 	<!--/banner-info-->
-	<?php include "view/header.php" ?>
-
-		<!-- banner info-->
-		<div class="w3-banner-head-info">
-				<div class="container">
-				   <div class="banner-text">
-				   <span class="fa fa-home" aria-hidden="true"></span>
-						<h2 class="editContent">PERFECT HOMESTAY FOR YOU</h2>
-						<p>Tìm kiếm và đặt Homestay mà bạn mong muốn</p>
-						<div class="book-form">
-						   <form action="/view/timkiem.php" method="get">
-								<div class="col-md-2 form-time-w3layouts editContent">
-										<label class="editContent"><span class="fa fa-map-marker" aria-hidden="true"></span>Thành Phố </label>
-										<input type="text" name="City" placeholder="Thành Phố Muốn Tìm">
-								</div>
-								<div class="col-md-2 form-date-w3-agileits editContent">
-										<label class="editContent"><span class="fa fa-user" aria-hidden="true"></span> Số Người</label>
-										<select class="form-control" name="Quantity">
-											<option value="1">1 người</option>
-											<option value="2">2 người</option>
-											<option value="3">3 người</option>
-											<option value="4">4 người</option>
-											<option value="5">5 người hoặc hơn</option>
-										</select>
-								</div>
-								<div class="col-md-2 form-date-w3-agileits editContent">
-										<label class="editContent"><span class="fa fa-use" aria-hidden="true"></span> Số tiền</label>
-										<select class="form-control" name="Price">
-											<option value="500-1000">500.000~1.000.000</option>
-											<option value="1000-2000">1.000.000~2.000.000</option>
-											<option value="2000-3000">2.000.000~3.000.000</option>
-											<option value="3000">Từ 3.000.000 trở lên</option>
-										</select>
-								</div>
-								<div class="col-md-2 form-left-agileits-w3layouts editContent">
-										<label class="editContent"><span class="fa fa-bus" aria-hidden="true"></span> Checkin</label>
-									<div class="agileits_w3layouts_main_gridl">
-										<input class="date has Datepicker" id="datepicker" placeholder="Ngảy Ở" name="StartDate" type="text" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '01/01/2019';}">
-									</div>
-								</div>
-								<div class="col-md-2 form-left-agileits-w3layouts editContent">
-										<label class="editContent"><span class="fa fa-bus" aria-hidden="true"></span> Checkout</label>
-									<div class="agileits_w3layouts_main_gridl">
-										<input class="date has Datepicker" id="datepicker1" placeholder="Ngày Đi" name="EndDate" type="text" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '01/01/2019';}">
-									</div>
-								</div>
-								<div class="col-md-2 form-left-agileits-submit editContent">
-									  <input type="submit" value="Tìm Kiếm">
-								</div>
-								<div class="clearfix"></div>
-							</form>
-						</div>
-					</div>
+	<?php include "view/header.php"; ?>
+	<!-- banner info-->
+	<div class="w3-banner-head-info">
+		<div class="container">
+			<div class="banner-text">
+			<span class="fa fa-home" aria-hidden="true"></span>
+				<h2 class="editContent">PERFECT HOMESTAY FOR YOU</h2>
+				<p>Tìm kiếm và đặt Homestay mà bạn mong muốn</p>
+				<div class="book-form">
+					<?php include "view/searchbar.html"; ?>
 				</div>
+			</div>
 		</div>
-		<!-- //banner-info-->
+	</div>
+	<!-- //banner-info-->
 		<div class="slides-box">
 			<ul class="slides">
 				<li style="background: url(images/TrangChuImages/s1.jpg) no-repeat;background-size:cover;"></li>
