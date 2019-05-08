@@ -9,7 +9,6 @@ include "../controller/timkiem.php";
     <title>Quản lý Homestay</title>
     <link rel="stylesheet" href="../css/TrangChuCSS/style.css">
 	<link rel="stylesheet" href="../css/TimKiemCSS/timkiem.css">
-	<link rel="stylesheet" href="../css/bootstrap.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -18,6 +17,7 @@ include "../controller/timkiem.php";
     <script type="text/javascript" src="../js/ThongTinCaNhanJS/jquery-3.3.1.min.js"></script>
     <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
             function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <link href="../css/bootstrap.css" rel="stylesheet" type="text/css" media="all" /><!-- bootstrap-css -->
 	
 </head>
 <body >
@@ -51,7 +51,7 @@ include "../controller/timkiem.php";
                     echo '<h6>Thành phố : <span>' . $homestay['thanhpho'] . '</span></h6>';
                     echo '<h6>Địa chỉ : <span>' . $homestay['diachi'] . '</span></h6>';
                     echo '</div>';
-                    echo '<a href="/view/homestay?id=' . $homestay['id'] . '" class="btn view-detail-btn">Xem chi tiết <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>';
+                    echo '<a href="/view/homestay.php?id=' . $homestay['idhomestay'] . '" class="btn view-detail-btn">Xem chi tiết <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>';
                     echo '</div></div></div></div>';
                 }
             ?>
