@@ -6,7 +6,7 @@ include "../controller/getallphong.php";
 <!DOCTYPE html>
 <html>
 <head lang="vi">
-	<title>thong tin homestay</title>
+	<title>Tim Kiem</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="../css/ThongTinHomestayCSS/thongtinhomestay.css">
@@ -21,10 +21,6 @@ include "../controller/getallphong.php";
 
 	<script type="text/javascript" src="../js/ThongTinCaNhanJS/jquery-3.3.1.min.js"></script>
 	<link href="../css/bootstrap.css" rel="stylesheet" type="text/css" media="all" /><!-- bootstrap-css -->
-
-	
-
-	<!-- banner css -->
 	
 </head>
 <body style="margin: 0px;padding: 0px;">

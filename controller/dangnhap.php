@@ -23,6 +23,6 @@ if (!password_verify($password, $result[0]['matkhau'])) {
     exit();
 }
 
-LogIn($email, $result[0]['ten'], $result[0]['sdt'], $result[0]['tinhtrang']);
+LogIn($email, $result[0]['ten'], $result[0]['sdt'], $result[0]['idchucvu'], $result[0]['tinhtrang']);
 header("Location: /index.php");
 exit();

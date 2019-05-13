@@ -57,11 +57,11 @@
         <ul class="nav navbar-nav navbar-right cl-effect-15">
           <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
           <li class="hidden"><a class="page-scroll" href="#page-top"></a>	</li>
-          <li><a class="page-scroll scroll" href="#home">Homestay</a></li>
-          <li><a class="page-scroll scroll" href="#packages">Yêu Thích</a></li>
-          <li><a class="page-scroll scroll" href="#testimonials">Khách Hàng</a></li>
-          <li><a class="page-scroll scroll" href="#contact">Liên hệ</a></li>
-
+          <?php
+          if ($_SESSION['idchucvu'] != 2) {
+            echo '<li><a class="page-scroll scroll" href="/view/lichsu.php">Lịch sử đặt phòng</a></li>';
+          }
+          ?>
           <?php
           if (isset($_SESSION['logged_in'])) {
             echo '<li><a class="page-scroll scroll responsive-signup-signin" href="/view/thongtincanhan.php">Xin chào '

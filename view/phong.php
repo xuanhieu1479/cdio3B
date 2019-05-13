@@ -43,17 +43,18 @@ include "../controller/getdatphonginfo.php";
 			</div>
 			<p style="margin-top: 15px;"><?php echo $resultPhong[0]['thongtin'] ?></p>
 			<a>Phương thức đặt phòng: Thẻ tín dụng</a><i class="fab fa-cc-visa" style="margin: 0  3px 0 3px ; font-size: 18px;color: #eb2f06"></i><a>& Paypal </a> <i class="fab fa-cc-paypal" style=" font-size: 18px;color: #eb2f06"></i>
-			<div class="dat-huy-phong" style="margin-left: 80px; margin-top: 20px">
-				<button class="button">
 				<?php
-				if ($datPhong == null) {
-					echo '<a href="/controller/datphong.php?id=' . $resultPhong[0]['idphong'] . '">Đặt phòng</a>';
-				}
-				else {
-					echo '<a href="/controller/huyphong.php?id=' . $resultPhong[0]['idphong'] . '">Hủy phòng</a>';
-				}
-				?></button>
-			</div>
+				if ($_SESSION['idchucvu'] != 2) {
+					echo '<div class="dat-huy-phong" style="margin-left: 80px; margin-top: 20px">';
+					echo '<button class="button">';
+					if ($datPhong == null) {
+						echo '<a href="/controller/datphong.php?id=' . $resultPhong[0]['idphong'] . '">Đặt phòng</a>';
+					}
+					else {
+						echo '<a href="/controller/huyphong.php?id=' . $resultPhong[0]['idphong'] . '">Hủy phòng</a>';
+					}
+					echo '</button></div>';
+				}?>			
 		</div>
 		
 		<div class="clear"></div>
