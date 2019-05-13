@@ -18,7 +18,7 @@ include "../controller/getdatphonginfo.php";
 		<div class="information">
 			<?php if ($resultPhong[0]['giamgia'] != 0) {
 				echo '<p style="margin-top: 10px;margin-bottom: 10px"><button style="border-radius: 5px; background:#d63031; height: 23px; margin-left: 50px; color: #eeee">';
-				echo '-' . $resultPhong[0]['giamgia']. ' Hôm Nay';
+				echo '-' . $resultPhong[0]['giamgia']. '%';
 				echo '</button></p>';
 			}?>
 			<div style="margin-top: 7px">
