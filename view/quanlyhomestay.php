@@ -2,11 +2,15 @@
 <html lang="en">
 <?php
 session_start();
-include "../controller/timkiem.php";
+include "../controller/quanlyhomestay.php";
+if (isset($_SESSION['update'])) {
+    echo '<script>alert("Xóa Homestay thành công")</script>';
+    $_SESSION['update'] = null;
+  }
 ?>
 <head>
     <meta charset="UTF-8">
-    <title>Tìm kiếm</title>
+    <title>Quản lý Homestay</title>
     <link rel="stylesheet" href="../css/TrangChuCSS/style.css">
 	<link rel="stylesheet" href="../css/TimKiemCSS/timkiem.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -28,7 +32,7 @@ include "../controller/timkiem.php";
             <?php
                 if ($result == null) {
                     echo '<div style="text-align: center; margin-bottom: 30px; margin-top: 30px; color: red">';
-                    echo '<h2>Không tồn tại Homestay cần tìm. Xin mời thử lại</h2>';
+                    echo '<h2>Bạn không có Homestay nào</h2>';
                     echo '</div>';
                 }
                 else {
@@ -46,6 +50,18 @@ include "../controller/timkiem.php";
                         echo '<h6>Địa chỉ : <span>' . $homestay['diachi'] . '</span></h6>';
                         echo '</div>';
                         echo '<a href="/view/homestay.php?id=' . $homestay['idhomestay'] . '" class="btn view-detail-btn">Xem chi tiết <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>';
+                        //Cập nhật
+                        echo '<form action="/view/capnhathomestay.php" style="display: inline-block; margin-left: 40px">';                        
+                        echo '<input type="text" name="id" hidden value="' . $homestay['idhomestay'] . '">';
+                        echo '<input type="submit" class="btn btn-success" value="Cập nhật"/></form>';
+                        //Xóa
+                        echo '<form action="/controller/xoahomestay.php" method="post" style="display: inline-block; margin-left: 20px">';                        
+                        echo '<input type="text" name="id" hidden value="' . $homestay['idhomestay'] . '">';
+                        echo '<input type="submit" class="btn btn-danger" value="Xóa"/></form>';
+                        //Đăng phòng
+                        echo '<form action="/view/dangphong.php" style="display: inline-block; margin-left: 20px">';                        
+                        echo '<input type="text" name="id" hidden value="' . $homestay['idhomestay'] . '">';
+                        echo '<input type="submit" class="btn btn-primary" value="Đăng phòng"/></form>';
                         echo '</div></div></div></div>';
                     }
                 }

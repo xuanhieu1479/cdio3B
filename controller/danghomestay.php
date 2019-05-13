@@ -41,7 +41,8 @@ try {
     $stmt->bindParam(':thanhpho', $city, PDO::PARAM_STR);
     $stmt->bindParam(':diachi', $address, PDO::PARAM_STR);
     $stmt->bindParam(':mota', $info, PDO::PARAM_STR);
-    $stmt->bindParam(':thumbnail', $thumbnail, PDO::PARAM_STR);
+    if ($thumbnail != null) $stmt->bindParam(':thumbnail', $thumbnail, PDO::PARAM_STR);
+    else $stmt->bindValue(':thumbnail', 'https://pix10.agoda.net/hotelImages/566/5662476/5662476_18081013590067405871.jpg?s=1024x768', PDO::PARAM_STR);
     $stmt->execute();
     $_SESSION['update'] = true;
     header("Location: /view/danghomestay.php");

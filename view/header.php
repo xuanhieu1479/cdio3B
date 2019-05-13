@@ -62,6 +62,7 @@
             echo '<li><a class="page-scroll scroll" href="/view/lichsu.php">Lịch sử đặt phòng</a></li>';
           } else {
             echo '<li><a class="page-scroll scroll" href="/view/danghomestay.php">Đăng Homestay</a></li>';
+            echo '<li><a class="page-scroll scroll" href="/view/quanlyhomestay.php">Quản lý Homestay</a></li>';
           }
           ?>
           <?php

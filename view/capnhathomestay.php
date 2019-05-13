@@ -1,14 +1,15 @@
 <?php
 session_start();
+include "../controller/gethomestayinfo.php";
 if (isset($_SESSION['update'])) {
-  echo '<script>alert("Đăng Homestay thành công")</script>';
+  echo '<script>alert("Cập nhật Homestay thành công")</script>';
   $_SESSION['update'] = null;
 }
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Đăng Homestay</title>
+	<title>Cập nhật Homestay</title>
 	<link rel="stylesheet" type="text/css" href="../css/DangHomestayCSS/danghome.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
@@ -18,7 +19,8 @@ if (isset($_SESSION['update'])) {
 </head>
 <body>
 	<div class="container">
-		<form class="form-post" action="../controller/danghomestay.php" method="post" enctype="multipart/form-data">
+		<form class="form-post" action="../controller/capnhathomestay.php" method="post" enctype="multipart/form-data">
+			<input tyle="text" value="<?php echo htmlspecialchars($_GET["id"]); ?>" name="id" hidden />
 			<div class="head-form">
 				<div class="left"><h3>PERFECTSTAY</h3></div>
 				<div class="right">
@@ -29,26 +31,26 @@ if (isset($_SESSION['update'])) {
 			</div>
 			<div class="body-form">
 				<div class="content">
-					<h2 style="font-size: 45px; color: white">Đăng Homestay</h2>
-					<input type="text" class="status" name="info" placeholder="Miêu tả Homestay....">
+					<h2 style="font-size: 45px; color: white">Cập nhật Homestay</h2>
+					<input type="text" value="<?php echo $resultHomestay[0]['mota'] ?>" class="status" name="info">
                     <input type='file' name="thumbnail" id="thumbnail" onchange="readURL(this);" />
-                    <img id="blah" src="https://pix10.agoda.net/hotelImages/566/5662476/5662476_18081013590067405871.jpg?s=1024x768" height="100" width="200" />                        
+                    <img id="blah" src="<?php echo $resultHomestay[0]['thumbnail'] ?>" height="100" width="200" />                        
 				</div>
 			</div>
 			<div class="bot-form">
 				<div class="col" id="col">
-					<h3 style="position: absolute; left: 30px; bottom: 80px;">Đăng</h3>
+					<h3 style="position: absolute; left: 30px; bottom: 80px;">Cập nhật</h3>
 					<h3 style="position: absolute; left: 30px; bottom: 40px;">Homestay</h3>
 				</div>
 				<div class="col">
-                    <input class="input" type="text" name="name" placeholder="Tên Homestay">
-					<input class="input" type="text" name="city" placeholder="Thành phố">
+                    <input class="input" value="<?php echo $resultHomestay[0]['ten'] ?>" type="text" name="name">
+					<input class="input" value="<?php echo $resultHomestay[0]['thanhpho'] ?>" type="text" name="city">
 				</div>
 				<div class="col">	
-					<input class="input" type="text" name="address" placeholder="Địa chỉ">					
+					<input class="input" value="<?php echo $resultHomestay[0]['diachi'] ?>" type="text" name="address">					
 				</div>
 				<div class="col">
-					<button class="input" style=" background-color: #ffa502; margin-top: 60px;" type="submit">Đăng thông tin</button>
+					<button class="input" style=" background-color: #ffa502; margin-top: 60px;" type="submit">Cập nhật</button>
 				</div>
             </div>
         </form>

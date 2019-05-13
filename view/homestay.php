@@ -48,7 +48,7 @@ include "../controller/getallphong.php";
 			</div><!---cot2-->
 		</div><!---information-->
 		<div class="roberto-rooms-area section-padding-100-0">
-		<h3 style="color: black; margin-left: 150px; margin-top: 50px">Danh sách phòng</h3></a>
+		<h3 style="color: black; margin-left: 150px; margin-top: 50px"><?php if ($result == null) echo "Chưa có phòng nào được đăng"; else echo "Danh sách phòng" ?></h3></a>
 		<div class="container" style="margin-top: 50px">		
             <?php
                 foreach($result as $phong) {
