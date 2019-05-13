@@ -2,11 +2,11 @@
 session_start();
 include "../data/connection.php";
 
-$idHomestay = htmlspecialchars($_POST["id"]);
+$idPhong = htmlspecialchars($_POST["id"]);
 $info = htmlspecialchars($_POST["info"]);
-$name = htmlspecialchars($_POST["name"]);
-$city = htmlspecialchars($_POST["city"]);
-$address = htmlspecialchars($_POST["address"]);
+$price = (int)htmlspecialchars($_POST["price"]);
+$capacity = (int)htmlspecialchars($_POST["capacity"]);
+$discount = (int)htmlspecialchars($_POST["discount"]);
 
 $thumbnail = $_FILES["thumbnail"];
 if ($thumbnail != null) {
@@ -32,20 +32,20 @@ if ($thumbnail != null) {
     $thumbnail = $responseObj->data->link;
 }
 
-$query = 'UPDATE Homestay SET Ten = :ten, ThanhPho = :thanhpho, DiaChi = :diachi, MoTa = :mota';
+$query = 'UPDATE Phong SET SoNguoiToiDa = :capacity, Gia = :price, ThongTin = :info, GiamGia = :discount';
 if ($thumbnail != null) $query .= ', Thumbnail = :thumbnail';
-$query .= ' WHERE IDHomestay = :idHomestay';
+$query .= ' WHERE IDPhong = :idPhong';
 try {    
     $stmt = $db->prepare($query);
-    $stmt->bindParam(":idHomestay", $idHomestay, PDO::PARAM_STR);
-    $stmt->bindParam(':ten', $name, PDO::PARAM_STR);
-    $stmt->bindParam(':thanhpho', $city, PDO::PARAM_STR);
-    $stmt->bindParam(':diachi', $address, PDO::PARAM_STR);
-    $stmt->bindParam(':mota', $info, PDO::PARAM_STR);
+    $stmt->bindParam(":idPhong", $idPhong, PDO::PARAM_STR);
+    $stmt->bindParam(':capacity', $capacity, PDO::PARAM_STR);
+    $stmt->bindParam(':price', $price, PDO::PARAM_STR);
+    $stmt->bindParam(':info', $info, PDO::PARAM_STR);
+    $stmt->bindParam(':discount', $discount, PDO::PARAM_STR);
     if ($thumbnail != null) $stmt->bindParam(':thumbnail', $thumbnail, PDO::PARAM_STR);
     $stmt->execute();
     $_SESSION['update'] = true;
-    header("Location: /view/capnhathomestay.php?id=" . $idHomestay);
+    header("Location: /view/capnhatphong.php?id=" . $idPhong);
     exit();
 } catch (\Exception $e) {
     echo $e->getMessage();

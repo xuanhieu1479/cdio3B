@@ -58,14 +58,16 @@
           <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
           <li class="hidden"><a class="page-scroll" href="#page-top"></a>	</li>
           <?php
-          if ($_SESSION['idchucvu'] != 2) {
-            echo '<li><a class="page-scroll scroll" href="/view/lichsu.php">Lịch sử đặt phòng</a></li>';
-          } else {
-            echo '<li><a class="page-scroll scroll" href="/view/danghomestay.php">Đăng Homestay</a></li>';
-            echo '<li><a class="page-scroll scroll" href="/view/quanlyhomestay.php">Quản lý Homestay</a></li>';
+          switch ($_SESSION['idchucvu']) {
+            case 1 :
+              break;
+            case 2 :
+              echo '<li><a class="page-scroll scroll" href="/view/danghomestay.php">Đăng Homestay</a></li>';
+              echo '<li><a class="page-scroll scroll" href="/view/quanlyhomestay.php">Quản lý Homestay</a></li>';
+              break;
+            case 3 :
+              echo '<li><a class="page-scroll scroll" href="/view/lichsu.php">Lịch sử đặt phòng</a></li>';
           }
-          ?>
-          <?php
           if (isset($_SESSION['logged_in'])) {
             echo '<li><a class="page-scroll scroll responsive-signup-signin" href="/view/thongtincanhan.php">Xin chào '
             . $_SESSION['ten']

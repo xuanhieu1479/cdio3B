@@ -39,7 +39,7 @@ if ($thumbnail != null) {
 }
 
 $query = 'INSERT INTO Phong VALUES (:idPhong, :idHomestay, :soNguoiToiDa, :gia, :thongTin, :thumbnail, :giamGia, \'Active\')';
-for ($i = 0; $i < $quantity; $i++) {
+for ($i = 0; $i <= $quantity; $i++) {
     try {
         $idPhong = $idHomestay . '-' . time();
         $stmt = $db->prepare($query);

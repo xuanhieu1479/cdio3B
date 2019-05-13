@@ -6,7 +6,7 @@ include "../controller/quanlyhomestay.php";
 if (isset($_SESSION['update'])) {
     echo '<script>alert("Xóa Homestay thành công")</script>';
     $_SESSION['update'] = null;
-  }
+}
 ?>
 <head>
     <meta charset="UTF-8">

@@ -2,6 +2,10 @@
 session_start();
 include "../controller/gethomestayinfo.php";
 include "../controller/getallphong.php";
+if (isset($_SESSION['update'])) {
+    echo '<script>alert("Xóa phòng thành công")</script>';
+    $_SESSION['update'] = null;
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -74,7 +78,19 @@ include "../controller/getallphong.php";
                     echo '<div class="room-feature">';
                     echo '<h6>Thông tin : <span>' . $phong['thongtin'] . '</span></h6>';
                     echo '</div>';
-                    echo '<a href="/view/phong.php?id=' . $phong['idphong'] . '" class="btn view-detail-btn">Xem chi tiết <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>';
+					echo '<a href="/view/phong.php?id=' . $phong['idphong'] . '" class="btn view-detail-btn">Xem chi tiết <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>';
+					if ($resultHomestay[0]['emailnguoidung'] == $_SESSION['email']) {
+						//Cập nhật
+						echo '<form action="/view/capnhatphong.php" style="display: inline-block; margin-left: 40px">';                        
+						echo '<input type="text" name="id" hidden value="' . $phong['idphong'] . '">';
+						echo '<input type="text" name="idHomestay" hidden value="' . $resultHomestay[0]['idhomestay'] . '">';
+						echo '<input type="submit" class="btn btn-success" value="Cập nhật"/></form>';
+						//Xóa
+						echo '<form action="/controller/xoaphong.php" method="post" style="display: inline-block; margin-left: 20px">';                        
+						echo '<input type="text" name="id" hidden value="' . $phong['idphong'] . '">';
+						echo '<input type="text" name="idHomestay" hidden value="' . $resultHomestay[0]['idhomestay'] . '">';
+						echo '<input type="submit" class="btn btn-danger" value="Xóa"/></form>';
+					}
                     echo '</div></div></div></div>';
                 }
             ?>
