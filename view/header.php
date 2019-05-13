@@ -60,6 +60,8 @@
           <?php
           if ($_SESSION['idchucvu'] != 2) {
             echo '<li><a class="page-scroll scroll" href="/view/lichsu.php">Lịch sử đặt phòng</a></li>';
+          } else {
+            echo '<li><a class="page-scroll scroll" href="/view/danghomestay.php">Đăng Homestay</a></li>';
           }
           ?>
           <?php

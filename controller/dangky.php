@@ -21,10 +21,12 @@ try {
     $stmt->bindParam(':tinhtrang', $tinhtrang, PDO::PARAM_STR);
     $stmt->execute();
     
-    LogIn($email, $name, $sdt, $tinhtrang);
+    LogIn($email, $name, $sdt, $permission, $tinhtrang);
     header("Location: /index.php");
+    exit();
 } catch (\Exception $e) {
     $_SESSION['error'] = "Tài khoản này đã có người sử dụng!";
-    header("Location: /view/dangky.php");
+    header("Location: /view/dangky.php");    
     echo $e->getMessage();
+    exit();
 }
