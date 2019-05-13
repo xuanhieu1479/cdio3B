@@ -26,33 +26,28 @@ include "../controller/timkiem.php";
     <div class="roberto-rooms-area section-padding-100-0">
         <div class="container" style="margin-top: 50px">
             <?php
-                foreach($result as $homestay) {
-                    echo '<div class="row">';
-                    echo '<div class="col-12 col-lg-8">';
-                    echo '<div class="single-room-area d-flex align-items-center mb-50 wow fadeInUp" data-wow-delay="100ms">';
-                    echo '<div class="room-thumbnail">';
-                    echo '<img src="' . $homestay['thumbnail'] . '">';
+                if ($result == null) {
+                    echo '<div style="text-align: center; margin-bottom: 30px; margin-top: 30px; color: red">';
+                    echo '<h2>Không tồn tại Homestay cần tìm. Xin mời thử lại</h2>';
                     echo '</div>';
-                    echo '<div class="room-content">';
-                    echo '<h2>' . $homestay['ten'] . '</h2>';
-                    // switch($homestay['SoNguoiToiDa']) {
-                    //     case 1 : 
-                    //         echo '<h2>Phòng đơn</h2>';
-                    //         break;
-                    //     case 2 : 
-                    //         echo '<h2>Phòng đôi</h2>';
-                    //         break;
-                    //     default : 
-                    //         echo '<h2>Phòng ' . $homestay['SoNguoiToiDa'] . ' người</h2>';
-                    //         break;
-                    // }
-                    // echo '<h4>' . $homestay['Gia'] . ' VND<span> / Ngày</span></h4>';
-                    echo '<div class="room-feature">';
-                    echo '<h6>Thành phố : <span>' . $homestay['thanhpho'] . '</span></h6>';
-                    echo '<h6>Địa chỉ : <span>' . $homestay['diachi'] . '</span></h6>';
-                    echo '</div>';
-                    echo '<a href="/view/homestay.php?id=' . $homestay['idhomestay'] . '" class="btn view-detail-btn">Xem chi tiết <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>';
-                    echo '</div></div></div></div>';
+                }
+                else {
+                    foreach($result as $homestay) {
+                        echo '<div class="row">';
+                        echo '<div class="col-12 col-lg-8">';
+                        echo '<div class="single-room-area d-flex align-items-center mb-50 wow fadeInUp" data-wow-delay="100ms">';
+                        echo '<div class="room-thumbnail">';
+                        echo '<img src="' . $homestay['thumbnail'] . '">';
+                        echo '</div>';
+                        echo '<div class="room-content">';
+                        echo '<h2>' . $homestay['ten'] . '</h2>';
+                        echo '<div class="room-feature">';
+                        echo '<h6>Thành phố : <span>' . $homestay['thanhpho'] . '</span></h6>';
+                        echo '<h6>Địa chỉ : <span>' . $homestay['diachi'] . '</span></h6>';
+                        echo '</div>';
+                        echo '<a href="/view/homestay.php?id=' . $homestay['idhomestay'] . '" class="btn view-detail-btn">Xem chi tiết <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>';
+                        echo '</div></div></div></div>';
+                    }
                 }
             ?>
         </div>

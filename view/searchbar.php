@@ -1,7 +1,13 @@
 <form action="/view/timkiem.php" method="get">
     <div class="col-md-2 form-time-w3layouts editContent">
-            <label class="editContent"><span class="fa fa-map-marker" aria-hidden="true"></span>Thành Phố </label>
-            <input type="text" name="City" placeholder="Thành Phố Muốn Tìm">
+            <label class="editContent"><span class="fa fa-map-marker" aria-hidden="true"></span>Thành Phố</label>
+            <select class="form-control" name="City">
+                <?php
+                    foreach ($result as $city) {
+                        echo '<option value="' . $city['thanhpho'] . '">' . $city['thanhpho'] . '</option>';
+                    }
+                ?>
+            </select>
     </div>
     <div class="col-md-2 form-date-w3-agileits editContent">
             <label class="editContent"><span class="fa fa-user" aria-hidden="true"></span> Số Người</label>

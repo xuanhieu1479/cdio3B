@@ -1,4 +1,6 @@
-<?php session_start() ?>
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,7 +48,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<h2 class="editContent">PERFECT HOMESTAY FOR YOU</h2>
 				<p>Tìm kiếm và đặt Homestay mà bạn mong muốn</p>
 				<div class="book-form">
-					<?php include "view/searchbar.html"; ?>
+					<?php
+					include "controller/getallcity.php";
+					include "view/searchbar.php";
+					?>
 				</div>
 			</div>
 		</div>

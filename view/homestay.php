@@ -30,27 +30,27 @@ include "../controller/getallphong.php";
 <body style="margin: 0px;padding: 0px;">
 	<div class="contain" style=" width: 100%">
 	<?php include "header.php" ?>
-			<div class="information">
-				<div class="cot1">
-					<h2><?php echo $resultHomestay[0]['ten']; ?></h2>
-					<p>Mã chỗ ở: <?php echo $resultHomestay[0]['idhomestay']; ?></p>
-					<a href="#" style="color: #7c7c7c; margin-top: 10px; text-decoration: none;"><i class="fas fa-map-marker" style="margin-right: 10px"></i><?php echo $resultHomestay[0]['diachi']; ?></a>
-					
-					<h3 style="color: black">Giới thiệu chỗ ở</h3>
-					<div style="font-size: 15px; margin-left: 15px;">
-						<p><?php echo $resultHomestay[0]['mota']; ?></p>
-					</div>
-					
-					<a style="text-decoration: none;"><div style="background-image: url('avatar.png');height: 50px;width: 50px;border-radius: 50px; margin-top: 30px"></div>
-					<h3 style="color: black">Email liên hệ: <?php echo $resultHomestay[0]['emailnguoidung']; ?></h3></a>
-
-				</div><!---cot1-->
+		<div class="information">
+			<div class="cot1">
+				<?php echo '<img src="' . $resultHomestay[0]['thumbnail'] . '" height="450" width="800">'; ?>
+				<h2><?php echo $resultHomestay[0]['ten']; ?></h2>
+				<p>Mã chỗ ở: <?php echo $resultHomestay[0]['idhomestay']; ?></p>
+				<a href="#" style="color: #7c7c7c; margin-top: 10px; text-decoration: none;"><i class="fas fa-map-marker" style="margin-right: 10px"></i><?php echo $resultHomestay[0]['diachi']; ?></a>
 				
-				<div class="cot2">
-					<p></p>
-				</div><!---cot2-->
-			</div><!---information-->	
-		</div><!---content-->
+				<h3 style="color: black">Giới thiệu chỗ ở</h3>
+				<div style="font-size: 15px; margin-left: 15px;">
+					<p><?php echo $resultHomestay[0]['mota']; ?></p>
+				</div>
+				
+				<a style="text-decoration: none;"><div style="background-image: url('avatar.png');height: 50px;width: 50px;border-radius: 50px; margin-top: 30px"></div>
+				<h3 style="color: black">Email liên hệ: <?php echo $resultHomestay[0]['emailnguoidung']; ?></h3></a>
+
+			</div><!---cot1-->
+			
+			<div class="cot2">
+				<p></p>
+			</div><!---cot2-->
+		</div><!---information-->
 		<div class="roberto-rooms-area section-padding-100-0">
 		<h3 style="color: black; margin-left: 150px; margin-top: 50px">Danh sách phòng</h3></a>
 		<div class="container" style="margin-top: 50px">		
