@@ -60,6 +60,7 @@
           <?php
           switch ($_SESSION['idchucvu']) {
             case 1 :
+              echo '<li><a class="page-scroll scroll" href="/view/quanlytaikhoan.php">Quản lý tài khoản</a></li>';
               break;
             case 2 :
               echo '<li><a class="page-scroll scroll" href="/view/danghomestay.php">Đăng Homestay</a></li>';
