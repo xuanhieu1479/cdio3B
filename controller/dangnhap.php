@@ -23,6 +23,12 @@ if (!password_verify($password, $result[0]['matkhau'])) {
     exit();
 }
 
+if ($result[0]['tinhtrang'] == 'Locked') {
+    $_SESSION['error'] = "Tài khoản của bạn đã bị khóa. Vui lòng liên hệ admin để kích hoạt lại.";
+    header("Location: /view/dangnhap.php");
+    exit();
+}
+
 LogIn($email, $result[0]['ten'], $result[0]['sdt'], $result[0]['idchucvu'], $result[0]['tinhtrang']);
 header("Location: /index.php");
 exit();
