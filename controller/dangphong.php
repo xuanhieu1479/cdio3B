@@ -10,7 +10,7 @@ $discount = (int)htmlspecialchars($_POST["discount"]);
 $thumbnail = $_FILES["thumbnail"];
 $idHomestay = htmlspecialchars($_POST["id"]);
 
-if ($price == null) $price = 100000;
+if ($price == null) $price = 500000;
 if ($quantity == null) $quantity = 1;
 if ($capacity == null) $capacity = 1;
 if ($discount == null) $discount = 0;

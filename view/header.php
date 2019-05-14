@@ -64,6 +64,7 @@
             case 2 :
               echo '<li><a class="page-scroll scroll" href="/view/danghomestay.php">Đăng Homestay</a></li>';
               echo '<li><a class="page-scroll scroll" href="/view/quanlyhomestay.php">Quản lý Homestay</a></li>';
+              echo '<li><a class="page-scroll scroll" href="/view/lietkeorder.php">Liệt kê Order</a></li>';
               break;
             case 3 :
               echo '<li><a class="page-scroll scroll" href="/view/lichsu.php">Lịch sử đặt phòng</a></li>';

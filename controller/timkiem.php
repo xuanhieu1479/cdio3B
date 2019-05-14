@@ -12,16 +12,16 @@ if ($quantity != ">5") $query .= " AND Phong.SoNguoiToiDa = :Quantity";
 else $query .= " AND Phong.SoNguoiToiDa > 5";
 switch ($price) {
     case "500-1000": 
-        $query .= " AND Phong.Gia > 500000 AND Phong.Gia < 1000000";
+        $query .= " AND Phong.Gia >= 500000 AND Phong.Gia < 1000000";
         break;
     case "1000-2000": 
-        $query .= " AND Phong.Gia > 1000000 AND Phong.Gia < 2000000";
+        $query .= " AND Phong.Gia >= 1000000 AND Phong.Gia < 2000000";
         break;
     case "2000-3000": 
-        $query .= " AND Phong.Gia > 2000000 AND Phong.Gia < 3000000";
+        $query .= " AND Phong.Gia >= 2000000 AND Phong.Gia < 3000000";
         break;
     case ">3000": 
-        $query .= " AND Phong.Gia > 3000000";
+        $query .= " AND Phong.Gia >= 3000000";
         break;    
 }
 

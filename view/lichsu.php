@@ -55,11 +55,17 @@ include "../controller/getorderhistory.php";
                         echo '<h4>' . $phong['gia'] . ' VND<span> / Ngày</span></h4>';
                         echo '<div class="room-feature">';
                         echo '<h6>Thông tin : <span>' . $phong['thongtin'] . '</span></h6>';
-                        if ($phong['tinhtrangorder'] == 'Pending') {
-                            echo '<h6>Tình trạng : <span><p style="color:red">' . $phong['tinhtrangorder'] . '</p></span></h6>';
-                        } else {
-                            echo '<h6>Tình trạng : <span><p style="color:green">' . $phong['tinhtrangorder'] . '</p></span></h6>';
-                        }                        
+                        switch ($phong['tinhtrangorder']) {
+                            case 'Pending' :
+                                echo '<h6>Tình trạng : <span><p style="color:orange">' . $phong['tinhtrangorder'] . '</p></span></h6>';
+                                break;
+                            case 'Accepted' :
+                                echo '<h6>Tình trạng : <span><p style="color:green">' . $phong['tinhtrangorder'] . '</p></span></h6>';
+                                break;
+                            case 'Denied' :
+                                echo '<h6>Tình trạng : <span><p style="color:red">' . $phong['tinhtrangorder'] . '</p></span></h6>';
+                                break;
+                        }                  
                         echo '</div>';
                         echo '<a href="/view/phong.php?id=' . $phong['idphong'] . '" class="btn view-detail-btn">Xem chi tiết <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>';
                         echo '</div></div></div></div>';

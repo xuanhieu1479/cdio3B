@@ -47,7 +47,7 @@ include "../controller/getdatphonginfo.php";
 				if ($_SESSION['idchucvu'] != 2) {
 					echo '<div class="dat-huy-phong" style="margin-left: 80px; margin-top: 20px">';
 					echo '<button class="button">';
-					if ($datPhong == null) {
+					if ($datPhong == null || $datphong['tinhtrang'] == 'Accepted' || $datphong['tinhtrang'] == 'Denied') {
 						echo '<a href="/controller/datphong.php?id=' . $resultPhong[0]['idphong'] . '">Đặt phòng</a>';
 					}
 					else {
