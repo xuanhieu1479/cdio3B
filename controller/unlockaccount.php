@@ -7,7 +7,6 @@ use PHPMailer\PHPMailer\Exception;
 include "../vendor/autoload.php";
 include "../data/connection.php";
 
-
 $email = htmlspecialchars($_POST["email"]);
 
 $query = "UPDATE NguoiDung SET TinhTrang = 'Active' WHERE Email = :email";
@@ -40,10 +39,11 @@ try {
 
     $mail->CharSet = 'UTF-8';
     $mail->send();
+    header("Location: /view/quanlytaikhoan.php");
+    exit();
 } catch (Exception $e) {
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
 
 header("Location: /view/quanlytaikhoan.php");
 exit();
-//Page not redirect when unlock accounts, trying to re-deploy once again.
