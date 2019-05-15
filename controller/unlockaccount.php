@@ -18,9 +18,6 @@ try {
     echo $e->getMessage();
 }
 
-header("Location: /view/quanlytaikhoan.php");
-exit();
-
 $mail = new PHPMailer(true);
 try {
     $mail->SMTPDebug = 2;                                       // Enable verbose debug output
@@ -46,6 +43,4 @@ try {
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
 
-header("Location: /view/quanlytaikhoan.php");
-exit();
 // echo "<script> window.location.replace('../view/quanlytaikhoan.php') </script>";
