@@ -43,5 +43,5 @@ try {
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
 
-header("Location: /view/quanlytaikhoan.php");
-exit();
+// header("Location: /view/quanlytaikhoan.php");
+// exit();
