@@ -38,10 +38,10 @@ try {
     $mail->AltBody = 'Tài khoản Homestay của bạn đã được mở khóa. Cảm ơn vì đã tin tưởng sử dụng dịch vụ của chúng tôi';
 
     $mail->CharSet = 'UTF-8';
-    $mail->send();
-    echo("LAGGGGGGGGG");    
+    $mail->send(); 
 } catch (Exception $e) {
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
 
 header("Location: /view/quanlytaikhoan.php");
+echo "<script> window.location.replace('l/view/quanlytaikhoan.php') </script>";
