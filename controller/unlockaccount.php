@@ -18,6 +18,9 @@ try {
     echo $e->getMessage();
 }
 
+header("Location: /view/quanlytaikhoan.php");
+exit();
+
 $mail = new PHPMailer(true);
 try {
     $mail->SMTPDebug = 2;                                       // Enable verbose debug output
@@ -44,4 +47,5 @@ try {
 }
 
 header("Location: /view/quanlytaikhoan.php");
-echo "<script> window.location.replace('l/view/quanlytaikhoan.php') </script>";
+exit();
+// echo "<script> window.location.replace('../view/quanlytaikhoan.php') </script>";
