@@ -32,9 +32,6 @@ include "../controller/getallusers.php";
                 echo '<input type="text" name="email" hidden value="' . $user['email'] . '">';
                 echo '<input type="submit" class="btn btn-success" value="Mở khóa tài khoản"/></form>';
             }
-            echo '<form action="/controller/resetpassword.php" method="post">';                        
-            echo '<input type="text" name="email" hidden value="' . $user['email'] . '">';
-            echo '<input type="submit" class="btn btn-primary" value="Reset mật khẩu"/></form>';
             echo '</td></tr>';
         }
         ?>        

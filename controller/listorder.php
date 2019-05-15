@@ -3,7 +3,10 @@ session_start();
 $email = $_SESSION['email'];
 include "../data/connection.php";
 
-$query = "SELECT DatPhong.IDDatPhong, NguoiDung.Ten AS TenKH, NguoiDung.SDT, Homestay.Ten AS TenHomestay, Phong.SoNguoiToiDa, Phong.Thumbnail FROM DatPhong
+$query = "SELECT DatPhong.IDDatPhong, DatPhong.EmailNguoiDung, 
+            NguoiDung.Ten AS TenKH, NguoiDung.SDT, 
+            Homestay.Ten AS TenHomestay, Homestay.DiaChi, Homestay.ThanhPho, 
+            Phong.SoNguoiToiDa, Phong.Thumbnail FROM DatPhong
             INNER JOIN NguoiDung ON DatPhong.EmailNguoiDung = NguoiDung.Email
             INNER JOIN Phong ON DatPhong.IDPhong = Phong.IDPhong
             INNER JOIN Homestay ON Phong.IDHomestay = Homestay.IDHomestay

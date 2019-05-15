@@ -39,9 +39,15 @@ include "../controller/listorder.php";
             echo '<td>';
             echo '<form action="/controller/xacnhanorder.php" method="post">';                        
             echo '<input type="text" name="id" hidden value="' . $order['iddatphong'] . '">';
+            echo '<input type="text" name="email" hidden value="' . $order['emailnguoidung'] . '">';
+            echo '<input type="text" name="diachi" hidden value="' . $order['diachi'] . '">';
+            echo '<input type="text" name="thanhpho" hidden value="' . $order['thanhpho'] . '">';
             echo '<input type="submit" class="btn btn-success" value="Xác nhận"/></form>';
             echo '<form action="/controller/tuchoiorder.php" method="post">';                        
             echo '<input type="text" name="id" hidden value="' . $order['iddatphong'] . '">';
+            echo '<input type="text" name="email" hidden value="' . $order['emailnguoidung'] . '">';
+            echo '<input type="text" name="diachi" hidden value="' . $order['diachi'] . '">';
+            echo '<input type="text" name="thanhpho" hidden value="' . $order['thanhpho'] . '">';
             echo '<input type="submit" class="btn btn-danger" value="Từ chối"/></form>';
             echo '</td></tr>';
         }

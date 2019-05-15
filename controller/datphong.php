@@ -2,7 +2,7 @@
 session_start();
 $phongID = $_GET["id"];
 $email = $_SESSION['email'];
-$datPhongID = $phongID . '-' . $email;
+$datPhongID = $email . '-' . $email;
 include "../data/connection.php";
 
 if ($email == null) {

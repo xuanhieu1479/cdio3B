@@ -4,7 +4,7 @@ $phongID = $_GET["id"];
 $email = $_SESSION['email'];
 include "../data/connection.php";
 
-$query = "SELECT * FROM DatPhong WHERE IDPhong = :id AND EmailNguoiDung = :email";
+$query = "SELECT * FROM DatPhong WHERE IDPhong = :id AND EmailNguoiDung = :email AND TinhTrang = 'Pending'";
 
 $datPhong = null;
 try {

@@ -15,7 +15,8 @@
 }
 .picture{
 	float: left;
-	width: 500px;
+	width: 400px;
+	height: 225px;
 	background-image: cover;
 	border-radius: 7px;
 	
