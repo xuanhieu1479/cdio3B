@@ -23,7 +23,7 @@ try {
 
 $mail = new PHPMailer(true);
 try {
-    $mail->SMTPDebug = 2;                                       // Enable verbose debug output
+    // $mail->SMTPDebug = 2;                                       // Enable verbose debug output
     $mail->isSMTP();                                            // Set mailer to use SMTP
     $mail->Host       = 'smtp.gmail.com';                       // Specify main and backup SMTP servers
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
@@ -40,6 +40,7 @@ try {
     $mail->Body    = 'Phòng của quý khách tại <b>' . $diachi . ', thành phố ' . $thanhpho . '</b> đã được chủ Homestay xác nhận còn trống. Chúc quý khách có một kì nghỉ vui vẻ';
     $mail->AltBody = 'Phòng của quý khách tại ' . $diachi . ', thành phố ' . $thanhpho . ' đã được chủ Homestay xác nhận còn trống. Chúc quý khách có một kì nghỉ vui vẻ';
 
+    $mail->CharSet = 'UTF-8';
     $mail->send();
 } catch (Exception $e) {
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";

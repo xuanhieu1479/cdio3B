@@ -19,39 +19,44 @@ include "../controller/listorder.php";
     </thead>
     <tbody>
         <?php
-        foreach ($result as $order) {
-            echo '<tr>';
-            echo '<th scope="row">' . $order['tenkh'] . '</th>';
-            if ($order['sdt'] == null) echo '<td>Chưa cập nhật</td>';
-            else echo '<td>' . $order['sdt'] . '</td>';
-            echo '<td>' . $order['tenhomestay'] . '</td>';
-            switch ($order['songuoitoida']) {
-                case 1 :
-                    echo '<td>Phòng đơn</td>';
-                    break;
-                case 2 :
-                    echo '<td>Phòng đôi</td>';
-                    break;
-                default :
-                    echo '<td>Phòng ' . $order['songuoitoida'] . ' người</td>';
-            }            
-            echo '<td><img src="' . $order['thumbnail'] . '" height="100" width="200"><td>';
-            echo '<td>';
-            echo '<form action="/controller/xacnhanorder.php" method="post">';                        
-            echo '<input type="text" name="id" hidden value="' . $order['iddatphong'] . '">';
-            echo '<input type="text" name="email" hidden value="' . $order['emailnguoidung'] . '">';
-            echo '<input type="text" name="diachi" hidden value="' . $order['diachi'] . '">';
-            echo '<input type="text" name="thanhpho" hidden value="' . $order['thanhpho'] . '">';
-            echo '<input type="submit" class="btn btn-success" value="Xác nhận"/></form>';
-            echo '<form action="/controller/tuchoiorder.php" method="post">';                        
-            echo '<input type="text" name="id" hidden value="' . $order['iddatphong'] . '">';
-            echo '<input type="text" name="email" hidden value="' . $order['emailnguoidung'] . '">';
-            echo '<input type="text" name="diachi" hidden value="' . $order['diachi'] . '">';
-            echo '<input type="text" name="thanhpho" hidden value="' . $order['thanhpho'] . '">';
-            echo '<input type="submit" class="btn btn-danger" value="Từ chối"/></form>';
-            echo '</td></tr>';
-        }
-        ?>        
+        if ($result == null) {
+            echo '<div style="text-align: center; margin-bottom: 30px; margin-top: 30px; color: red">';
+            echo '<h2>Chưa nhận được order nào.</h2>';
+            echo '</div>';
+        } else {
+            foreach ($result as $order) {
+                echo '<tr>';
+                echo '<th scope="row">' . $order['tenkh'] . '</th>';
+                if ($order['sdt'] == null) echo '<td>Chưa cập nhật</td>';
+                else echo '<td>' . $order['sdt'] . '</td>';
+                echo '<td>' . $order['tenhomestay'] . '</td>';
+                switch ($order['songuoitoida']) {
+                    case 1 :
+                        echo '<td>Phòng đơn</td>';
+                        break;
+                    case 2 :
+                        echo '<td>Phòng đôi</td>';
+                        break;
+                    default :
+                        echo '<td>Phòng ' . $order['songuoitoida'] . ' người</td>';
+                }            
+                echo '<td><img src="' . $order['thumbnail'] . '" height="100" width="200"><td>';
+                echo '<td>';
+                echo '<form action="/controller/xacnhanorder.php" method="post">';                        
+                echo '<input type="text" name="id" hidden value="' . $order['iddatphong'] . '">';
+                echo '<input type="text" name="email" hidden value="' . $order['emailnguoidung'] . '">';
+                echo '<input type="text" name="diachi" hidden value="' . $order['diachi'] . '">';
+                echo '<input type="text" name="thanhpho" hidden value="' . $order['thanhpho'] . '">';
+                echo '<input type="submit" class="btn btn-success" value="Xác nhận"/></form>';
+                echo '<form action="/controller/tuchoiorder.php" method="post">';                        
+                echo '<input type="text" name="id" hidden value="' . $order['iddatphong'] . '">';
+                echo '<input type="text" name="email" hidden value="' . $order['emailnguoidung'] . '">';
+                echo '<input type="text" name="diachi" hidden value="' . $order['diachi'] . '">';
+                echo '<input type="text" name="thanhpho" hidden value="' . $order['thanhpho'] . '">';
+                echo '<input type="submit" class="btn btn-danger" value="Từ chối"/></form>';
+                echo '</td></tr>';
+            }
+        }?>        
     </tbody>
     </table>
 </div>
