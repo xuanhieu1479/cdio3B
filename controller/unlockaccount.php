@@ -46,3 +46,4 @@ try {
 
 header("Location: /view/quanlytaikhoan.php");
 exit();
+//Page not redirect when unlock accounts, trying to re-deploy once again.
