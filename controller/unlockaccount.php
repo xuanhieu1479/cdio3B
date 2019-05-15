@@ -43,4 +43,6 @@ try {
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
 
-// echo "<script> window.location.replace('../view/quanlytaikhoan.php') </script>";
+header("Location: /view/quanlytaikhoan.php");
+exit();
+echo "<script> window.location.replace('../view/quanlytaikhoan.php') </script>";
