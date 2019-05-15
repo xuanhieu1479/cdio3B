@@ -39,12 +39,9 @@ try {
 
     $mail->CharSet = 'UTF-8';
     $mail->send();
-    header("Location: /view/quanlytaikhoan.php");
-    exit();
     echo("LAGGGGGGGGG");    
 } catch (Exception $e) {
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
 
 header("Location: /view/quanlytaikhoan.php");
-exit();
